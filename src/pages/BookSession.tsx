@@ -16,13 +16,13 @@ const timeSlots = [
   "10:00 PM",
 ];
 
-const PRICE_PER_PERSON = 500;
+const PRICE_PER_PERSON = 100;
 
 const BookSession = () => {
   const [qrCode, setQrCode] = useState<string>("");
   const [selectedTime, setSelectedTime] = useState<string>("");
   const [numberOfPeople, setNumberOfPeople] = useState<number>(2);
-  const [totalAmount, setTotalAmount] = useState<number>(1000);
+  const [totalAmount, setTotalAmount] = useState<number>(100);
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [uploadPreview, setUploadPreview] = useState<string>("");
   const [paymentStatus, setPaymentStatus] = useState<"payment" | "success">("payment");
@@ -56,7 +56,7 @@ const BookSession = () => {
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      if (file.size > 5 * 1024 * 1024) {
+      if (file.size > 5 * 100 * 1024) {
         toast({
           title: "File too large",
           description: "Please upload an image under 5MB",
@@ -94,15 +94,30 @@ const BookSession = () => {
 
     setIsLoading(true);
 
-    // Simulate API call - Replace with actual API when backend is connected
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // Simulate processing
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    setPaymentStatus("success");
+    // Prepare WhatsApp message
+    const message = `🎮 *New Gaming Session Booking*
+
+📅 *Time Slot:* ${selectedTime}
+👥 *Players:* ${numberOfPeople}
+💰 *Amount Paid:* ₹${totalAmount}
+
+Please attach Payment screenshot 👇`;
+
+    // Open WhatsApp with prefilled message
+    const phoneNumber = "917007258640"; // Replace with your actual WhatsApp number
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, "_blank");
+
     setIsLoading(false);
+    setPaymentStatus("success");
     
     toast({
-      title: "Booking Confirmed!",
-      description: "We'll contact you shortly on WhatsApp",
+      title: "WhatsApp Opened!",
+      description: "Please attach your payment screenshot and send",
     });
   };
 
