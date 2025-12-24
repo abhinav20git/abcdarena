@@ -1,7 +1,15 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import QRCode from "qrcode";
-import { ArrowLeft, CheckCircle, Upload, Minus, Plus, Clock, Users } from "lucide-react";
+import {
+  ArrowLeft,
+  CheckCircle,
+  Upload,
+  Minus,
+  Plus,
+  Clock,
+  Users,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
@@ -25,7 +33,9 @@ const BookSession = () => {
   const [totalAmount, setTotalAmount] = useState<number>(100);
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [uploadPreview, setUploadPreview] = useState<string>("");
-  const [paymentStatus, setPaymentStatus] = useState<"payment" | "success">("payment");
+  const [paymentStatus, setPaymentStatus] = useState<"payment" | "success">(
+    "payment"
+  );
   const [isLoading, setIsLoading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -108,13 +118,15 @@ Please attach Payment screenshot 👇`;
 
     // Open WhatsApp with prefilled message
     const phoneNumber = "917007258640"; // Replace with your actual WhatsApp number
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
     window.open(whatsappUrl, "_blank");
 
     setIsLoading(false);
     setPaymentStatus("success");
-    
+
     toast({
       title: "WhatsApp Opened!",
       description: "Please attach your payment screenshot and send",
@@ -124,7 +136,10 @@ Please attach Payment screenshot 👇`;
   if (paymentStatus === "success") {
     return (
       <div className="min-h-screen bg-background text-foreground flex items-center justify-center p-4">
-        <Card variant="glow" className="max-w-md w-full p-10 text-center animate-slide-up">
+        <Card
+          variant="glow"
+          className="max-w-md w-full p-10 text-center animate-slide-up"
+        >
           <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-primary" />
           </div>
@@ -133,9 +148,10 @@ Please attach Payment screenshot 👇`;
             Thank you for your booking.
           </p>
           <p className="text-muted-foreground mb-8">
-            Our team will contact you via WhatsApp shortly to confirm your session details.
+            Our team will contact you via WhatsApp shortly to confirm your
+            session details.
           </p>
-          
+
           <div className="bg-card/50 rounded-xl p-4 mb-8 border border-border">
             <div className="flex justify-between text-sm mb-2">
               <span className="text-muted-foreground">Time Slot</span>
@@ -150,7 +166,7 @@ Please attach Payment screenshot 👇`;
               <span className="font-bold text-primary">₹{totalAmount}</span>
             </div>
           </div>
-          
+
           <Link to="/">
             <Button variant="hero" className="w-full">
               Back to Home
@@ -220,7 +236,9 @@ Please attach Payment screenshot 👇`;
                 >
                   <Minus className="w-5 h-5" />
                 </button>
-                <span className="text-4xl font-bold min-w-16 text-center">{numberOfPeople}</span>
+                <span className="text-4xl font-bold min-w-16 text-center">
+                  {numberOfPeople}
+                </span>
                 <button
                   onClick={() => handleNumberChange(1)}
                   disabled={numberOfPeople >= 20}
@@ -263,16 +281,22 @@ Please attach Payment screenshot 👇`;
                     <img src={qrCode} alt="UPI QR Code" className="w-64 h-64" />
                   </div>
                   <div className="bg-primary/10 border border-primary/30 rounded-xl p-4 text-center">
-                    <p className="text-lg font-bold text-primary">₹{totalAmount}</p>
-                    <p className="text-sm text-muted-foreground mt-1">UPI: gauravpande2002@okaxis</p>
+                    <p className="text-lg font-bold text-primary">
+                      ₹{totalAmount}
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      UPI: gauravpande2002@okaxis
+                    </p>
                   </div>
                 </div>
               )}
             </Card>
 
             <Card variant="glass" className="p-6">
-              <h2 className="text-xl font-semibold mb-4">Upload Payment Proof</h2>
-              
+              <h2 className="text-xl font-semibold mb-4">
+                Upload Payment Proof
+              </h2>
+
               {uploadPreview ? (
                 <div className="space-y-4">
                   <div className="relative rounded-xl overflow-hidden border border-primary/30 h-48">
@@ -297,7 +321,9 @@ Please attach Payment screenshot 👇`;
                 >
                   <Upload className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
                   <p className="font-medium mb-1">Click to upload screenshot</p>
-                  <p className="text-sm text-muted-foreground">PNG, JPG up to 5MB</p>
+                  <p className="text-sm text-muted-foreground">
+                    PNG, JPG up to 5MB
+                  </p>
                 </div>
               )}
 
