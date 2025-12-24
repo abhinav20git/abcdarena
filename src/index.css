@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 20 14% 4%;
+    --foreground: 40 20% 95%;
+
+    --card: 20 14% 8%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 20 14% 8%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 20 14% 4%;
+
+    --secondary: 20 14% 14%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 20 14% 18%;
+    --muted-foreground: 40 10% 60%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 20 14% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 20% 95%;
+
+    --border: 20 14% 18%;
+    --input: 20 14% 18%;
+    --ring: 38 92% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --glow-primary: 0 0 60px hsl(38 92% 50% / 0.3);
+    --glow-subtle: 0 0 40px hsl(38 92% 50% / 0.15);
+    --gradient-hero: linear-gradient(135deg, hsl(38 92% 50% / 0.2) 0%, transparent 50%);
+    --gradient-card: linear-gradient(180deg, hsl(20 14% 12%) 0%, hsl(20 14% 8%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 92% 55%) 0%, hsl(30 90% 45%) 100%);
+
+    --sidebar-background: 20 14% 6%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 20 14% 4%;
+    --sidebar-accent: 20 14% 14%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 20 14% 18%;
+    --sidebar-ring: 38 92% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-subtle {
+    box-shadow: var(--glow-subtle);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(38 92% 55%) 0%, hsl(45 95% 60%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(20 14% 8%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(20 14% 25%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(38 92% 50%);
+}
