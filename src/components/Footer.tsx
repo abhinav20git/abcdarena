@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-20 h-10 rounded-xl flex items-center justify-center">
                   <div className="w-24 h-24  rounded-xl flex items-center justify-center transition-all duration-300 group-hover:glow-primary">
-            <img height={54} width={180} src="/public/logo.png"/>
+            <img height={54} width={180} src="/src/assets/logo.png"/>
           </div>
               </div>
               <span className="text-xl font-bold">Awadh Board and Card Domain</span>
