@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Dice5, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
-
+import logo from "../assets/logo.png"
 const Hero = () =>{
   const navigate=useNavigate()
   return (
@@ -65,7 +65,7 @@ const Hero = () =>{
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl animate-pulse-glow" />
                   <div className="w-40 h-44  rounded-xl flex items-center justify-center transition-all duration-300 group-hover:glow-primary">
-            <img height={74} width={180} src="/src/assets/logo.png"/>
+            <img height={74} width={180} src={logo}/>
           </div>
               </div>
               <p className="mt-6 text-xl font-semibold text-primary">Premium Gaming Space</p>

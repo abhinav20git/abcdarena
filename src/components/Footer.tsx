@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Dice5, Instagram, Youtube, MessageCircle } from "lucide-react";
-
+import logo from "../assets/logo.png"
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-card/30 py-10 px-4 sm:px-6 lg:px-8">
@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-20 h-10 rounded-xl flex items-center justify-center">
                   <div className="w-24 h-24  rounded-xl flex items-center justify-center transition-all duration-300 group-hover:glow-primary">
-            <img height={54} width={180} src="/src/assets/logo.png"/>
+            <img height={54} width={180} src={logo}/>
           </div>
               </div>
               <span className="text-xl font-bold">Awadh Board and Card Domain</span>
