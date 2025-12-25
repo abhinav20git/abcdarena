@@ -25,8 +25,8 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center transition-all duration-300 group-hover:glow-primary">
-            <img height={40} width={100} src="/public/logo.png"/>
+          <div className="w-28 h-24  rounded-xl flex items-center justify-center transition-all duration-300 group-hover:glow-primary">
+            <img height={54} width={180} src="/public/logo.png"/>
           </div>
          
         </Link>

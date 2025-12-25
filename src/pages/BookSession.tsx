@@ -93,14 +93,14 @@ const BookSession = () => {
       return;
     }
 
-    if (!uploadedFile) {
-      toast({
-        title: "Upload payment proof",
-        description: "Please upload your payment screenshot",
-        variant: "destructive",
-      });
-      return;
-    }
+    // if (!uploadedFile) {
+    //   toast({
+    //     title: "Upload payment proof",
+    //     description: "Please upload your payment screenshot",
+    //     variant: "destructive",
+    //   });
+    //   return;
+    // }
 
     setIsLoading(true);
 
@@ -143,29 +143,11 @@ Please attach Payment screenshot 👇`;
           <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-primary" />
           </div>
-          <h2 className="text-3xl font-bold mb-3">Payment Received!</h2>
-          <p className="text-muted-foreground mb-2">
-            Thank you for your booking.
-          </p>
+          
           <p className="text-muted-foreground mb-8">
-            Our team will contact you via WhatsApp shortly to confirm your
-            session details.
+            Our team will contact you via WhatsApp shortly if you have shared the screenshot.
           </p>
 
-          <div className="bg-card/50 rounded-xl p-4 mb-8 border border-border">
-            <div className="flex justify-between text-sm mb-2">
-              <span className="text-muted-foreground">Time Slot</span>
-              <span className="font-medium">{selectedTime}</span>
-            </div>
-            <div className="flex justify-between text-sm mb-2">
-              <span className="text-muted-foreground">Players</span>
-              <span className="font-medium">{numberOfPeople}</span>
-            </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-muted-foreground">Amount Paid</span>
-              <span className="font-bold text-primary">₹{totalAmount}</span>
-            </div>
-          </div>
 
           <Link to="/">
             <Button variant="hero" className="w-full">
@@ -291,7 +273,7 @@ Please attach Payment screenshot 👇`;
                 </div>
               )}
             </Card>
-
+{/* 
             <Card variant="glass" className="p-6">
               <h2 className="text-xl font-semibold mb-4">
                 Upload Payment Proof
@@ -334,13 +316,13 @@ Please attach Payment screenshot 👇`;
                 onChange={handleFileUpload}
                 className="hidden"
               />
-            </Card>
+            </Card> */}
 
             <Button
               variant="hero"
               size="xl"
               onClick={handlePaymentConfirm}
-              disabled={isLoading || !uploadedFile || !selectedTime}
+              disabled={isLoading ||  !selectedTime}
               className="w-full"
             >
               {isLoading ? "Processing..." : "Confirm Booking"}

@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Dice5, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 
-const Hero = () => {
+const Hero = () =>{
+  const navigate=useNavigate()
   return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
+    <section className="mt-2 pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
       {/* Background glow effect */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] gradient-hero rounded-full blur-3xl opacity-50 -z-10" />
       
@@ -33,24 +34,24 @@ const Hero = () => {
                 Book Your Session
               </Button>
             </Link>
-            <Button variant="outline" size="xl">
+            <Button variant="outline" size="xl" onClick={()=>navigate("/games")}>
               Explore Games
             </Button>
           </div>
           
           <div className="flex items-center gap-8 pt-4">
             <div>
-              <p className="text-3xl font-bold text-gradient">100+</p>
+              <p className="text-3xl font-bold text-gradient">60+</p>
               <p className="text-sm text-muted-foreground">Board Games</p>
             </div>
             <div className="w-px h-12 bg-border" />
             <div>
-              <p className="text-3xl font-bold text-gradient">500+</p>
+              <p className="text-3xl font-bold text-gradient">100+</p>
               <p className="text-sm text-muted-foreground">Happy Gamers</p>
             </div>
             <div className="w-px h-12 bg-border" />
             <div>
-              <p className="text-3xl font-bold text-gradient">4.9★</p>
+              <p className="text-3xl font-bold text-gradient">4.2★</p>
               <p className="text-sm text-muted-foreground">Rating</p>
             </div>
           </div>
@@ -63,7 +64,9 @@ const Hero = () => {
             <div className="text-center relative z-10">
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl animate-pulse-glow" />
-                <Dice5 className="w-32 h-32 text-primary relative animate-float" />
+                  <div className="w-40 h-44  rounded-xl flex items-center justify-center transition-all duration-300 group-hover:glow-primary">
+            <img height={74} width={180} src="/public/logo.png"/>
+          </div>
               </div>
               <p className="mt-6 text-xl font-semibold text-primary">Premium Gaming Space</p>
               <p className="mt-2 text-muted-foreground">Where strategy meets fun</p>

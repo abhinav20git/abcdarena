@@ -42,7 +42,7 @@ const Features = () => {
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why Choose <span className="text-gradient">Game Arena</span>?
+            Why Choose <span className="text-gradient">ABCD</span>?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             We provide everything you need for an unforgettable gaming experience
