@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import GamesGallery from "@/components/Games";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
         <Hero />
         <Features />
         <CTA />
+        <GamesGallery />
       </main>
       <Footer />
     </div>
