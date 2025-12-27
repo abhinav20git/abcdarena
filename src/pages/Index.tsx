@@ -4,6 +4,7 @@ import Features from "@/components/Features";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import GamesGallery from "@/components/Games";
+import AIChatModal from "@/components/AIchatModal";
 
 const Index = () => {
   return (
@@ -14,6 +15,9 @@ const Index = () => {
         <Features />
         <CTA />
         <GamesGallery />
+        <div className="flex justify-end  ">
+          <AIChatModal/>
+        </div>
       </main>
       <Footer />
     </div>

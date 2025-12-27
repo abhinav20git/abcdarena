@@ -36,7 +36,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative">
+    <section id="why" className="py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
       
       <div className="max-w-7xl mx-auto relative">

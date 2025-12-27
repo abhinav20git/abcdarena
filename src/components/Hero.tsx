@@ -2,7 +2,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { Dice5, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
-import logo from "../assets/logo.png"
+import logo from "../assets/finalLogo.png"
+import AIChat from "./AIchat";
+import AIChatModal from "./AIchatModal";
 const Hero = () =>{
   const navigate=useNavigate()
   return (
@@ -73,7 +75,9 @@ const Hero = () =>{
             </div>
           </Card>
         </div>
+        
       </div>
+      
     </section>
   );
 };

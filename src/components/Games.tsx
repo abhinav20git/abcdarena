@@ -123,8 +123,8 @@ const GamesGallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
+    <div id="games" className="min-h-screen bg-background">
+      <section className="pt-14 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
         {/* Background glow effect */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] gradient-hero rounded-full blur-3xl opacity-50 -z-10" />
 

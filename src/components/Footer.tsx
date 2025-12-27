@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Dice5, Instagram, Youtube, MessageCircle } from "lucide-react";
-import logo from "../assets/logo.png"
+import logo from "../assets/finalLogo.png"
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-card/30 py-10 px-4 sm:px-6 lg:px-8">
