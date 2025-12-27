@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import io from "socket.io-client";
 import { Button } from "@/components/ui/button";
-import { Socket } from "socket.io-client";
+import {Socket} from "socket.io-client";
 
 interface Card {
   type: "number" | "bonus" | "secondChance" | "freeze";
@@ -80,7 +80,7 @@ export const GameBoardMultiplayer = () => {
   const [isFlipping, setIsFlipping] = useState(false);
 
   // Socket connection
-  const [socket, setSocket] = useState<Socket | null>(null);
+  const [socket, setSocket] = useState<typeof Socket | null>(null);
 
   // Initialize socket connection
   useEffect(() => {
