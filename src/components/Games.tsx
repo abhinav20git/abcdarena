@@ -18,17 +18,17 @@ const GamesGallery = () => {
   const navigate = useNavigate();
 
   const games = [
-    {
-      id: 1,
-      name: "Monopoly",
-      category: "board",
-      players: "2-8",
-      duration: "60-180 min",
-      difficulty: "Easy",
-      image:
-        "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80",
-      isOnline: false,
-    },
+    // {
+    //   id: 1,
+    //   name: "Monopoly",
+    //   category: "board",
+    //   players: "2-8",
+    //   duration: "60-180 min",
+    //   difficulty: "Easy",
+    //   image:
+    //     "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80",
+    //   isOnline: false,
+    // },
     {
       id: 3,
       name: "Chess",
@@ -40,28 +40,28 @@ const GamesGallery = () => {
         "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?w=400&h=300&fit=crop",
       isOnline: false,
     },
-    {
-      id: 4,
-      name: "Scrabble",
-      category: "board",
-      players: "2-4",
-      duration: "90 min",
-      difficulty: "Medium",
-      image:
-        "https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=400&h=300&fit=crop",
-      isOnline: false,
-    },
-    {
-      id: 5,
-      name: "Poker",
-      category: "card",
-      players: "2-10",
-      duration: "60-120 min",
-      difficulty: "Medium",
-      image:
-        "https://images.unsplash.com/photo-1511193311914-0346f16efe90?w=400&h=300&fit=crop",
-      isOnline: false,
-    },
+    // {
+    //   id: 4,
+    //   name: "Scrabble",
+    //   category: "board",
+    //   players: "2-4",
+    //   duration: "90 min",
+    //   difficulty: "Medium",
+    //   image:
+    //     "https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=400&h=300&fit=crop",
+    //   isOnline: false,
+    // },
+    // {
+    //   id: 5,
+    //   name: "Poker",
+    //   category: "card",
+    //   players: "2-10",
+    //   duration: "60-120 min",
+    //   difficulty: "Medium",
+    //   image:
+    //     "https://images.unsplash.com/photo-1511193311914-0346f16efe90?w=400&h=300&fit=crop",
+    //   isOnline: false,
+    // },
     {
       id: 6,
       name: "Catan",
@@ -74,14 +74,14 @@ const GamesGallery = () => {
       isOnline: false,
     },
     {
-      id: 8,
-      name: "Cards Against Humanity",
-      category: "card",
-      players: "4-20",
-      duration: "30-90 min",
+      id: 7,
+      name: "Azul",
+      category: "board",
+      players: "2-4",
+      duration: "30-45 min",
       difficulty: "Easy",
       image:
-        "https://images.unsplash.com/photo-1515569067071-ec3b51335dd0?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1566694271453-390536dd1f0d?w=400&h=300&fit=crop",
       isOnline: false,
     },
     {
@@ -95,6 +95,72 @@ const GamesGallery = () => {
         "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80",
       isOnline: true,
       route: "/flip7",
+    },
+    {
+      id: 10,
+      name: "Splendor",
+      category: "board",
+      players: "2-4",
+      duration: "30 min",
+      difficulty: "Medium",
+      image:
+        "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=400&h=300&fit=crop",
+      isOnline: false,
+    },
+    {
+      id: 11,
+      name: "Clue",
+      category: "board",
+      players: "3-6",
+      duration: "45-60 min",
+      difficulty: "Easy",
+      image:
+        "https://images.unsplash.com/photo-1587899897387-091ebd01a6b2?w=400&h=300&fit=crop",
+      isOnline: false,
+    },
+    {
+      id: 12,
+      name: "Secret Hitler",
+      category: "card",
+      players: "5-10",
+      duration: "45 min",
+      difficulty: "Medium",
+      image:
+        "https://images.unsplash.com/photo-1566694271453-390536dd1f0d?w=400&h=300&fit=crop",
+      isOnline: false,
+    },
+    {
+      id: 13,
+      name: "Exploding Kittens",
+      category: "card",
+      players: "2-5",
+      duration: "15 min",
+      difficulty: "Easy",
+      image:
+        "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?w=400&h=300&fit=crop",
+      isOnline: false,
+    },
+    {
+      id: 14,
+      name: "UNO No Mercy",
+      category: "card",
+      players: "2-6",
+      duration: "20-30 min",
+      difficulty: "Easy",
+      image:
+        "https://images.unsplash.com/photo-1541278107931-e006523892df?w=400&h=300&fit=crop",
+      isOnline: false,
+    },
+    {
+      id: 15,
+      name: "Coup",
+      category: "card",
+      players: "2-6",
+      duration: "15 min",
+      difficulty: "Medium",
+      image:
+        "",
+      isOnline: false,
     },
   ];
 
@@ -123,20 +189,13 @@ const GamesGallery = () => {
   };
 
   return (
-    <div id="games" className="min-h-screen bg-background">
+    <div id="games" className="scroll-mt-12 min-h-screen bg-background">
       <section className="pt-14 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
         {/* Background glow effect */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] gradient-hero rounded-full blur-3xl opacity-50 -z-10" />
 
         {/* Header */}
         <div className="text-center mb-16 animate-slide-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">
-              Premium Game Collection
-            </span>
-          </div>
-
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
             Explore Our
             <br />
@@ -206,7 +265,7 @@ const GamesGallery = () => {
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src={game.image}
+                    src={game.image? game.image :`../../public/placeholder.svg`}
                     alt={game.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />

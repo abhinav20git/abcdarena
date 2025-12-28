@@ -1,3 +1,4 @@
+import { Computer, ComputerIcon } from 'lucide-react';
 import { useState } from 'react';
 const BACKEND_URL= import.meta.env.VITE_BACKEND_URL;
 
@@ -40,6 +41,9 @@ export default function AIChat() {
   return (
      <div className="w-full">
       <div className="h-64 overflow-y-auto border rounded p-2 mb-2">
+        <div className='flex justify-center item-center mt-10'>
+          <ComputerIcon width={50} height={60} />
+        </div>
         {messages.map((m, i) => (
           <div
             key={i}
@@ -62,7 +66,7 @@ export default function AIChat() {
           className="text-black border rounded px-3 py-2 flex-1"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask about games..."
+          placeholder="Ask about us..."
         />
         <button
           onClick={sendMessage}
