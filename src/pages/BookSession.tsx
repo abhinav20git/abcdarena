@@ -148,14 +148,14 @@ const BookSession = () => {
     setLoading(true);
     await new Promise((r) => setTimeout(r, 900));
     const msg =
-      ` *${selectedEvent.title}*\n\n` +
-      ` *Name:* ${info.name}\n` +
-      ` *Mobile:* ${info.mobile}` +
-      (info.email ? `\n📧 *Email:* ${info.email}` : "") +
-      `\n\n📅 *Date:* ${selectedEvent.date}` +
-      `\n *Time:* ${selectedEvent.time}` +
-      `\n *Venue:* ${selectedEvent.venue}` +
-      `\n *Entry Fee Paid:* ₹${selectedEvent.fee}\n\nPlease attach Payment screenshot 👇`;
+      ` ${selectedEvent.title}\n\n` +
+      ` Name: ${info.name}\n` +
+      ` Mobile: ${info.mobile}` +
+      (info.email ? `\nEmail: ${info.email}` : "") +
+      `\n\n Date: ${selectedEvent.date}` +
+      `\n Time: ${selectedEvent.time}` +
+      `\n Venue: ${selectedEvent.venue}` +
+      `\n Entry Fee Paid: ₹${selectedEvent.fee}\n\nPlease attach Payment screenshot 👇`;
     window.open(
       `https://wa.me/${selectedEvent.whatsapp}?text=${encodeURIComponent(msg)}`,
       "_blank"
