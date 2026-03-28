@@ -41,21 +41,21 @@ const Hero = () =>{
             </Button>
           </div>
           
-          <div className="flex items-center gap-8 pt-4">
+          <div className="flex items-center gap-24 pt-4">
             <div>
-              <p className="text-3xl font-bold text-gradient">60+</p>
+              <p className="text-3xl font-bold text-gradient">10+</p>
               <p className="text-sm text-muted-foreground">Board Games</p>
             </div>
             <div className="w-px h-12 bg-border" />
             <div>
-              <p className="text-3xl font-bold text-gradient">100+</p>
+              <p className="text-3xl font-bold text-gradient">50+</p>
               <p className="text-sm text-muted-foreground">Happy Gamers</p>
             </div>
-            <div className="w-px h-12 bg-border" />
-            <div>
+            {/* <div className="w-px h-12 bg-border" /> */}
+            {/* <div>
               <p className="text-3xl font-bold text-gradient">4.2★</p>
               <p className="text-sm text-muted-foreground">Rating</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
