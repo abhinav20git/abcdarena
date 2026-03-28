@@ -13,24 +13,22 @@ import { GameBoardMultiplayer } from "./pages/Games/Flip7/GameBoardMultiplayer";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/book" element={<BookSession />} />
-          <Route path="/games" element={<GamesGallery />} />
-
-          <Route path="/flip7" element={<GameBoard />}/>
-          <Route path="/flip7/multiplayer" element={<GameBoardMultiplayer />} />
-
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+ <QueryClientProvider client={queryClient}>
+  <TooltipProvider>
+    <Toaster />
+    <Sonner />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/book" element={<BookSession />} />
+        <Route path="/games" element={<GamesGallery />} />
+        <Route path="/flip7" element={<GameBoard />} />
+        <Route path="/flip7/multiplayer" element={<GameBoardMultiplayer />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </TooltipProvider>
+</QueryClientProvider>
 );
 
 export default App;

@@ -409,13 +409,13 @@ const GamesGallery = () => {
               {
                 icon: Users,
                 label: "Active Players",
-                value: "100+",
+                value: "50+",
                 color: "text-primary",
               },
               {
                 icon: Sparkles,
                 label: "Events Monthly",
-                value: "50+",
+                value: "5+",
                 color: "text-primary",
               },
             ].map((stat, index) => (

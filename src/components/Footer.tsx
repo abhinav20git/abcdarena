@@ -90,7 +90,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-4 flex flex-col md:flex-row justify-center items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 Awadh Board and Card Domain. All rights reserved.
+            © 2026 Awadh Board and Card Domain. All rights reserved.
           </p>
           {/* <div className="flex gap-6 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
