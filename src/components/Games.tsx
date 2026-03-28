@@ -70,7 +70,7 @@ const GamesGallery = () => {
       duration: "60-120 min",
       difficulty: "Medium",
       image:
-        "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=400&h=300&fit=crop",
+        "/catan.jpeg",
       isOnline: false,
     },
     {
@@ -81,7 +81,7 @@ const GamesGallery = () => {
       duration: "30-45 min",
       difficulty: "Easy",
       image:
-        "https://images.unsplash.com/photo-1566694271453-390536dd1f0d?w=400&h=300&fit=crop",
+        "/azul.jpeg",
       isOnline: false,
     },
     {
@@ -104,29 +104,29 @@ const GamesGallery = () => {
       duration: "30 min",
       difficulty: "Medium",
       image:
-        "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=400&h=300&fit=crop",
+        "/splendor.jpeg",
       isOnline: false,
     },
     {
       id: 11,
-      name: "Clue",
+      name: "Cluedo",
       category: "board",
       players: "3-6",
       duration: "45-60 min",
       difficulty: "Easy",
       image:
-        "https://images.unsplash.com/photo-1587899897387-091ebd01a6b2?w=400&h=300&fit=crop",
+        "/cluedo.jpeg",
       isOnline: false,
     },
     {
       id: 12,
       name: "Secret Hitler",
-      category: "card",
+      category: "board",
       players: "5-10",
       duration: "45 min",
       difficulty: "Medium",
       image:
-        "https://images.unsplash.com/photo-1566694271453-390536dd1f0d?w=400&h=300&fit=crop",
+        "/secretHitler.jpeg",
       isOnline: false,
     },
     {
@@ -154,18 +154,51 @@ const GamesGallery = () => {
     {
       id: 15,
       name: "Coup",
-      category: "card",
+      category: "social",
       players: "2-6",
       duration: "15 min",
       difficulty: "Medium",
       image:
-        "",
+        "/coup.jpeg",
+      isOnline: false,
+    },
+    {
+      id: 16,
+      name: "One night ultimate Warewolf",
+      category: "social",
+      players: "2-6",
+      duration: "15 min",
+      difficulty: "Medium",
+      image:
+        "/warewolf.jpeg",
+      isOnline: false,
+    },{
+      id: 16,
+      name: "Mafia Vendetta",
+      category: "social",
+      players: "2-6",
+      duration: "15 min",
+      difficulty: "Medium",
+      image:
+        "/mafia.jpeg",
+      isOnline: false,
+    },
+    {
+      id: 16,
+      name: "King Domino",
+      category: "board",
+      players: "2-6",
+      duration: "15 min",
+      difficulty: "Medium",
+      image:
+        "/kingdomino.jpeg",
       isOnline: false,
     },
   ];
 
   const categories = [
     { id: "all", label: "All Games", icon: Gamepad2 },
+    { id: "social", label: "Social Deduction Games", icon: Gamepad },
     { id: "board", label: "Board Games", icon: Dice5 },
     { id: "card", label: "Card Games", icon: Trophy },
     { id: "online", label: "Online Games", icon: Gamepad },
@@ -259,6 +292,8 @@ const GamesGallery = () => {
                   <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-md bg-primary/20 text-primary border border-primary/30 flex items-center gap-1 z-10">
                     <Gamepad className="w-3 h-3" />
                     Free{" "}
+
+
                   </div>
                 )}
 
@@ -313,11 +348,13 @@ const GamesGallery = () => {
                         ? "bg-gradient-to-r from-primary to-secondary text-primary-foreground"
                         : "bg-primary text-primary-foreground"
                     }`}
+                    disabled={game.isOnline}
                   >
                     {game.isOnline ? (
                       <>
-                        <Play className="w-4 h-4" />
-                        Play Game
+                        {/* <Play className="w-4 h-4" />
+                        Play Game */}
+                        Coming Soon...
                       </>
                     ) : (
                       "Book Now"
