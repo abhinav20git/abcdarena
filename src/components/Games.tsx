@@ -19,14 +19,14 @@ const GamesGallery = () => {
 
   const games = [
     // {
-    //   id: 1,
-    //   name: "Monopoly",
-    //   category: "board",
-    //   players: "2-8",
-    //   duration: "60-180 min",
+    //   id: 22,
+    //   name: "Clue",
+    //   category: "card",
+    //   players: "2",
+    //   duration: "20-60 min",
     //   difficulty: "Easy",
     //   image:
-    //     "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80",
+    //     "/clue.jpeg",
     //   isOnline: false,
     // },
     {
@@ -40,28 +40,6 @@ const GamesGallery = () => {
         "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?w=400&h=300&fit=crop",
       isOnline: false,
     },
-    // {
-    //   id: 4,
-    //   name: "Scrabble",
-    //   category: "board",
-    //   players: "2-4",
-    //   duration: "90 min",
-    //   difficulty: "Medium",
-    //   image:
-    //     "https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=400&h=300&fit=crop",
-    //   isOnline: false,
-    // },
-    // {
-    //   id: 5,
-    //   name: "Poker",
-    //   category: "card",
-    //   players: "2-10",
-    //   duration: "60-120 min",
-    //   difficulty: "Medium",
-    //   image:
-    //     "https://images.unsplash.com/photo-1511193311914-0346f16efe90?w=400&h=300&fit=crop",
-    //   isOnline: false,
-    // },
     {
       id: 6,
       name: "Catan",
@@ -69,8 +47,7 @@ const GamesGallery = () => {
       players: "3-4",
       duration: "60-120 min",
       difficulty: "Medium",
-      image:
-        "/catan.jpeg",
+      image: "/catan.jpeg",
       isOnline: false,
     },
     {
@@ -80,8 +57,7 @@ const GamesGallery = () => {
       players: "2-4",
       duration: "30-45 min",
       difficulty: "Easy",
-      image:
-        "/azul.jpeg",
+      image: "/azul.jpeg",
       isOnline: false,
     },
     {
@@ -103,19 +79,17 @@ const GamesGallery = () => {
       players: "2-4",
       duration: "30 min",
       difficulty: "Medium",
-      image:
-        "/splendor.jpeg",
+      image: "/splendor.jpeg",
       isOnline: false,
     },
     {
       id: 11,
-      name: "Cluedo",
-      category: "board",
+      name: "Clue",
+      category: "card",
       players: "3-6",
       duration: "45-60 min",
       difficulty: "Easy",
-      image:
-        "/cluedo.jpeg",
+      image: "/clue.jpeg",
       isOnline: false,
     },
     {
@@ -125,8 +99,7 @@ const GamesGallery = () => {
       players: "5-10",
       duration: "45 min",
       difficulty: "Medium",
-      image:
-        "/secretHitler.jpeg",
+      image: "/secretHitler.jpeg",
       isOnline: false,
     },
     {
@@ -136,8 +109,7 @@ const GamesGallery = () => {
       players: "2-5",
       duration: "15 min",
       difficulty: "Easy",
-      image:
-        "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?w=400&h=300&fit=crop",
+      image: "/kittens.jpeg",
       isOnline: false,
     },
     {
@@ -147,8 +119,7 @@ const GamesGallery = () => {
       players: "2-6",
       duration: "20-30 min",
       difficulty: "Easy",
-      image:
-        "https://images.unsplash.com/photo-1541278107931-e006523892df?w=400&h=300&fit=crop",
+      image: "/uno.jpeg",
       isOnline: false,
     },
     {
@@ -157,9 +128,8 @@ const GamesGallery = () => {
       category: "social",
       players: "2-6",
       duration: "15 min",
-      difficulty: "Medium",
-      image:
-        "/coup.jpeg",
+      difficulty: "Easy",
+      image: "/coup.jpeg",
       isOnline: false,
     },
     {
@@ -168,30 +138,28 @@ const GamesGallery = () => {
       category: "social",
       players: "2-6",
       duration: "15 min",
-      difficulty: "Medium",
-      image:
-        "/warewolf.jpeg",
+      difficulty: "Easy",
+      image: "/warewolf.jpeg",
       isOnline: false,
-    },{
-      id: 16,
+    },
+    {
+      id: 17,
       name: "Mafia Vendetta",
       category: "social",
       players: "2-6",
       duration: "15 min",
-      difficulty: "Medium",
-      image:
-        "/mafia.jpeg",
+      difficulty: "Easy",
+      image: "/mafia.jpeg",
       isOnline: false,
     },
     {
-      id: 16,
+      id: 18,
       name: "King Domino",
       category: "board",
       players: "2-6",
       duration: "15 min",
       difficulty: "Medium",
-      image:
-        "/kingdomino.jpeg",
+      image: "/kingdomino.jpeg",
       isOnline: false,
     },
   ];
@@ -220,7 +188,7 @@ const GamesGallery = () => {
       navigate("/book");
     }
   };
-
+  console.log("GamesGallery render");
   return (
     <div id="games" className="scroll-mt-12 min-h-screen bg-background">
       <section className="pt-14 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
@@ -292,15 +260,15 @@ const GamesGallery = () => {
                   <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-md bg-primary/20 text-primary border border-primary/30 flex items-center gap-1 z-10">
                     <Gamepad className="w-3 h-3" />
                     Free{" "}
-
-
                   </div>
                 )}
 
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src={game.image? game.image :`../../public/placeholder.svg`}
+                    src={
+                      game.image ? game.image : `../../public/placeholder.svg`
+                    }
                     alt={game.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -312,8 +280,8 @@ const GamesGallery = () => {
                       game.difficulty === "Easy"
                         ? "bg-primary/20 text-primary border border-primary/30"
                         : game.difficulty === "Medium"
-                        ? "bg-accent/20 text-accent border border-accent/30"
-                        : "bg-destructive/20 text-destructive border border-destructive/30"
+                          ? "bg-accent/20 text-accent border border-accent/30"
+                          : "bg-destructive/20 text-destructive border border-destructive/30"
                     }`}
                   >
                     {game.difficulty}
