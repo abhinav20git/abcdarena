@@ -28,8 +28,9 @@ const EVENTS = [
   {
     id: "social-deduction-apr1",
     title: "Social Deduction Night",
-    subtitle: "Mafia Vendetta · Secret Hitler · One Night Ultimate Warewolf · Coup",isoDate: "2026-04-01T16:00:00",
-    date: "Tuesday, April 1st 2026",
+    subtitle: "Mafia Vendetta · Secret Hitler · One Night Ultimate Warewolf · Coup",
+    isoDate: "2026-04-04T16:00:00",
+date: "Saturday, April 4th 2026",
     
     time: "4:00 PM onwards",
     venue: "Melons Studio, Lucknow",
