@@ -59,7 +59,7 @@ export const ALL_EVENTS = [
     id: "social-deduction-apr8",
     title: "Social Deduction Night",
     subtitle: "Mafia Vendetta · Secret Hitler · One Night Ultimate Werewolf · Coup",
-    date: "Tuesday, April 8th 2026",
+    date: "Tuesday, April 7th 2026",
     isoDate: "2026-04-08T16:00:00",
     time: "4:00 PM onwards",
     venue: "Melons Studio, Lucknow",
