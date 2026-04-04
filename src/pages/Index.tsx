@@ -15,9 +15,9 @@ const Index = () => {
         <Features />
         <CTA />
         <GamesGallery />
-        <div className="flex justify-end  ">
+        {/* <div className="flex justify-end  ">
           <AIChatModal/>
-        </div>
+        </div> */}
       </main>
       <Footer />
     </div>

@@ -316,13 +316,13 @@ const GamesGallery = () => {
                         ? "bg-gradient-to-r from-primary to-secondary text-primary-foreground"
                         : "bg-primary text-primary-foreground"
                     }`}
-                    disabled={game.isOnline}
+                    // disabled={game.isOnline}
                   >
                     {game.isOnline ? (
                       <>
-                        {/* <Play className="w-4 h-4" />
-                        Play Game */}
-                        Coming Soon...
+                        <Play className="w-4 h-4" />
+                        Play Game
+                        {/* Coming Soon... */}
                       </>
                     ) : (
                       "Book Now"

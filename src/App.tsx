@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import GamesGallery from "./components/Games";
 import { GameBoard } from "./pages/Games/Flip7/GameBoard";
 import { GameBoardMultiplayer } from "./pages/Games/Flip7/GameBoardMultiplayer";
+import EventsHistory from "./components/EventsHistory";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/book" element={<BookSession />} />
+        <Route path="/events/history" element={<EventsHistory />} />
         <Route path="/games" element={<GamesGallery />} />
         <Route path="/flip7" element={<GameBoard />} />
         <Route path="/flip7/multiplayer" element={<GameBoardMultiplayer />} />
