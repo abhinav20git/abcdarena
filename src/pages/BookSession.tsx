@@ -17,6 +17,7 @@ import {
   Zap,
   Tag,
   CheckCircle,
+  Gamepad2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -36,7 +37,7 @@ export const ALL_EVENTS = [
     fee: 100,
     originalFee: 200,
     spotsLeft: 20,
-    attendees: 18,           // fill in actual turnout
+    attendees: 18,
     tags: ["Board Games", "Social Deduction"],
     icon: <Skull className="w-6 h-6" />,
     accentBorder: "border-red-500/40 hover:border-red-400/70",
@@ -53,10 +54,10 @@ export const ALL_EVENTS = [
       "An evening of bluffing, betrayal and social deduction. Multiple rounds of the best hidden-role games with fellow gamers. Beginners welcome!",
     upi: "8400224215@pthdfc",
     whatsapp: "918400224215",
-    open: false,   // ← past event
+    open: false,
   },
   {
-    id: "social-deduction-apr8",
+    id: "social-deduction-apr7",
     title: "Social Deduction Night",
     subtitle: "Mafia Vendetta · Secret Hitler · One Night Ultimate Werewolf · Coup",
     date: "Tuesday, April 7th 2026",
@@ -83,7 +84,44 @@ export const ALL_EVENTS = [
       "An evening of bluffing, betrayal and social deduction. Multiple rounds of the best hidden-role games with fellow gamers. Beginners welcome!",
     upi: "8400224215@pthdfc",
     whatsapp: "918400224215",
-    open: true,    // ← new open event
+    open: false,   // ← moved to past
+  },
+  {
+    id: "board-game-bonanza-apr11",
+    title: "Board Game Bonanza",
+    subtitle: "Catan · Azul · Cluedo GoT · Exploding Kittens · Kingdomino · Ticket to Ride · Shasn · Forbidden Desert · Scotland Yard · Uno No Mercy",
+    date: "Friday, April 11th 2026",
+    isoDate: "2026-04-11T16:00:00",
+    time: "4:00 PM onwards",
+    venue: "Melons Studio, Lucknow",
+    fee: 100,
+    originalFee: 200,
+    spotsLeft: 20,
+    attendees: 0,
+    tags: ["Board Games", "Collab Event"],
+    icon: <Gamepad2 className="w-6 h-6" />,
+    accentBorder: "border-amber-500/40 hover:border-amber-400/70",
+    selectedBorder: "border-primary ring-2 ring-primary/30",
+    gradientStrip: "from-amber-600 to-primary",
+    badge: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+    games: [
+      { name: "Catan", icon: <Gamepad2 className="w-4 h-4" /> },
+      { name: "Azul", icon: <Gamepad2 className="w-4 h-4" /> },
+      { name: "Cluedo: Game of Thrones", icon: <Gamepad2 className="w-4 h-4" /> },
+      { name: "Exploding Kittens Party", icon: <Gamepad2 className="w-4 h-4" /> },
+      { name: "Kingdomino", icon: <Gamepad2 className="w-4 h-4" /> },
+      { name: "Ticket to Ride", icon: <Gamepad2 className="w-4 h-4" /> },
+      { name: "Shasn", icon: <Gamepad2 className="w-4 h-4" /> },
+      { name: "Forbidden Desert", icon: <Gamepad2 className="w-4 h-4" /> },
+      { name: "Scotland Yard", icon: <Gamepad2 className="w-4 h-4" /> },
+      { name: "Uno No Mercy", icon: <Gamepad2 className="w-4 h-4" /> },
+    ],
+    description:
+      "A massive board game night in collaboration with Melons Studio! From strategy to co-op to party games — 10 titles across all genres. Beginners absolutely welcome, taught games available all evening.",
+    collaborator: "Melons Studio",
+    upi: "8400224215@pthdfc",
+    whatsapp: "918400224215",
+    open: true,
   },
 ];
 
@@ -316,6 +354,11 @@ const BookSession = () => {
                               {event.tags.map((t) => (
                                 <span key={t} className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${event.badge}`}>{t}</span>
                               ))}
+                              {"collaborator" in event && event.collaborator && (
+                                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border bg-purple-500/20 text-purple-300 border-purple-500/30">
+                                  ✦ In collab with {event.collaborator}
+                                </span>
+                              )}
                             </div>
                             <div className="text-right flex-shrink-0">
                               <div className="flex items-center justify-end gap-2">
