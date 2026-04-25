@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ALL_EVENTS } from "@/pages/BookSession";
+import { ALL_EVENTS } from "@/lib/events";
 
 const EventsHistory = () => {
   const past = ALL_EVENTS.filter((e) => !e.open);
