@@ -279,8 +279,8 @@ export const ALL_EVENTS = [
       { name: "Uno No Mercy", icon: <Gamepad2 className="w-4 h-4" /> },
     ],
     description:
-      "A massive board game night in collaboration with Melons Studio! From strategy to co-op to party games — 10 titles across all genres. Beginners absolutely welcome, taught games available all evening.",
-    collaborator: "Melons Studio",
+      "A massive board game night in collaboration with Art Station Studio! From strategy to co-op to party games — 10 titles across all genres. Beginners absolutely welcome, taught games available all evening.",
+    collaborator: "Art Station Studio",
     upi: "8400224215@pthdfc",
     whatsapp: "918400224215",
     open: true,
