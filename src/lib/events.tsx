@@ -248,7 +248,7 @@ export const ALL_EVENTS = [
       "Catan · Azul · Cluedo GoT · Exploding Kittens Party version · Forbidden Desert · Scotland Yard · Uno No Mercy",
     date: "Tuesday, April 29th 2026",
     isoDate: "2026-04-29T17:00:00",
-    time: "4:00 PM onwards",
+    time: "5:00 PM onwards",
     venue: "Art Station Studio, Lucknow",
     fee: 100,
     originalFee: 200,
