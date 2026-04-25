@@ -247,7 +247,7 @@ export const ALL_EVENTS = [
     subtitle:
       "Catan · Azul · Cluedo GoT · Exploding Kittens · Kingdomino · Ticket to Ride · Shasn · Forbidden Desert · Scotland Yard · Uno No Mercy",
     date: "Tuesday, April 29th 2026",
-    isoDate: "2026-04-29T16:00:00",
+    isoDate: "2026-04-29T17:00:00",
     time: "4:00 PM onwards",
     venue: "Art Station Studio, Lucknow",
     fee: 100,
