@@ -243,7 +243,7 @@ export const ALL_EVENTS = [
   },
    {
     id: "board-game-bonanza-apr11",
-    title: "Board Game Bonanza",
+    title: "Social Deduction Night",
     subtitle:
       "Catan · Azul · Cluedo GoT · Exploding Kittens Party version · Forbidden Desert · Scotland Yard · Uno No Mercy",
     date: "Tuesday, April 29th 2026",
