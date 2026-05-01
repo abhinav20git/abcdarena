@@ -292,8 +292,8 @@ export const ALL_EVENTS = [
       "Mafia Vendetta · Secret Hitler · One Night Ultimate Werewolf · Coup  · Avalon" ,
     date: "Saturday, May 2nd 2026",
     
-    isoDate: "2026-05-02T17:00:00",
-    time: "5:00 PM onwards",
+    isoDate: "2026-05-02T16:00:00",
+    time: "4:00 PM onwards",
     venue: "Art Station Studio, Lucknow",
     fee: 100,
     originalFee: 200,
