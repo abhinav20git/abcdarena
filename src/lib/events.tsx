@@ -286,7 +286,7 @@ export const ALL_EVENTS = [
     open: false,
   },
    {
-    id: "social-deduction-apr7",
+    id: "social-deduction-may2",
     title: "Social Deduction Night",
     subtitle:
       "Mafia Vendetta · Secret Hitler · One Night Ultimate Werewolf · Coup  · Avalon" ,
